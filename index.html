@@ -14,16 +14,25 @@
     <!--Link CSS sheet & Javascript scripts-->
     <link href="css.css" rel="stylesheet" type="text/css">
     <script src="javascript.js"></script>
+    <script src="search.js"></script>
 
     <!--Set Viewport (helps scaling on mobile devices) https://www.w3schools.com/html/html_responsive.asp-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--Set characterset-->
     <meta charset="utf-8">
-    
+
 </head>
 
 <body>
+
+    <!--Search Bar https://www.freecodecamp.org/news/how-to-submit-a-form-with-javascript/#:~:text=To%20submit%20a%20form%20using,if%20any%20data%20is%20submitted). https://www.w3schools.com/jsref/event_onsubmit.asp-->
+    <div class="container-fluid">
+        <form id="searchform" action="" onsubmit="search()">
+            <input type="text" id="searchquery" placeholder="Enter your search:">
+            <button type="submit" id="submit">Submit</button>
+        </form>
+    </div>
 
 </body>
 
