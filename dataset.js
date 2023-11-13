@@ -18,15 +18,15 @@ function book(bookID, title, authors, average_rating, isbn, isbn13, language_cod
 }
 
 
-//Fetch CSV file and parse it https://www.w3schools.com/jsref/api_fetch.asp https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch https://www.w3schools.com/js/js_promise.asp //https://www.w3schools.com/jsref/jsref_split.asp
+//Fetch CSV file and parse it https://www.w3schools.com/jsref/api_fetch.asp https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch https://www.w3schools.com/js/js_promise.asp //https://www.w3schools.com/jsref/jsref_split.asp https://www.w3schools.com/js/js_array_methods.asp#:~:text=Array%20elements%20can%20be%20deleted,()%20or%20shift()%20instead.
 let books = new Array();
 fetch('data.csv')
     .then(response => response.text())
     .then(text => {
         var lines = text.split('\n');
         var data = lines.map(line => line.split(','));
-        for(let i=0; i< data.length; i++) {
+        for(let i=1; i< data.length-1; i++) {
             books.push(new book(data[i][0], data[i][1], data[i][2], data[i][3], data[i][4], data[i][5], data[i][6], data[i][7], data[i][8], data[i][9], data[i][10], data[i][11]))
-            }
+            };
         }
     )
