@@ -18,7 +18,7 @@ function book(bookID, title, authors, average_rating, isbn, isbn13, language_cod
 }
 
 
-//Fetch CSV file and parse it https://www.w3schools.com/jsref/api_fetch.asp https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch https://www.w3schools.com/js/js_promise.asp //https://www.w3schools.com/jsref/jsref_split.asp https://www.w3schools.com/js/js_array_methods.asp#:~:text=Array%20elements%20can%20be%20deleted,()%20or%20shift()%20instead.
+//Fetch CSV file and parse it (W3Schools, 2023d) (MDN Web Docs, 2023a) (W3Schools, 2023e)  (W3Schools, 2023f) (W3Schools, 2023g)
 let books = new Array();
 fetch('data.csv')
     .then(response => response.text())
