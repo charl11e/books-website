@@ -27,7 +27,11 @@ W3Schools (Refsnes Data) (2023h) Bootstrap Navigation Bar. Available at: https:/
 
 W3Schools (Refsnes Data) (2023i) Bootstrap 5 Dropdowns. Available at: https://www.w3schools.com/bootstrap5/bootstrap_dropdowns.php (Accessed: 13th November 2023)
 
+W3Schools (Refsnes Data) (2023j) Javascript Array map(). Available at: https://www.w3schools.com/jsref/jsref_map.asp (Accessed: 15th November 2023)
 
+W3Schools (Refsnes Data) (2023k) JavaScript Arrow Function. Available at: https://www.w3schools.com/js/js_arrow_function.asp (Accessed: 15th November 2023)
+
+W3Schools (Refsnes Data) (2023l) Javascript Aync. Available at: https://www.w3schools.com/js/js_async.asp (Accessed: 15th November 2023)
 
 IMAGES:
 
