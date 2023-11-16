@@ -1,6 +1,5 @@
 //Parses data into array using object constructor
 
-
 //Store books as objects
 class book {
     constructor(bookID, title, authors, average_rating, isbn, isbn13, language_code, num_pages, ratings_count, text_reviews_count, publication_date, publisher) {
@@ -31,6 +30,11 @@ async function parse() {
     for(let i=1; i< data.length-1; i++) {
         books.push(new book(data[i][0], data[i][1], data[i][2], data[i][3], data[i][4], data[i][5], data[i][6], data[i][7], data[i][8], data[i][9], data[i][10], data[i][11]))
         };
+    }
+
+    //Check if page is on full database, if so, load the table
+    if (document.URL.includes("fulldataset.html")) {
+        setTimeout(tb, 100)
     }
 
 parse()

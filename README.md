@@ -1,8 +1,7 @@
-# summativewebsite
-Organisation (Year that the page was last updated) Title of web page. Available at: URL (Accessed: date).
-Surname, Initial. (Year that the site was published/last updated) Title of web page. Available at: URL (Accessed: date).
+# Programming Gold Summative Website
+Based on the dataset 'Goodreads-books' https://www.kaggle.com/datasets/jealousleopard/goodreadsbooks
 
-References:
+# References:
 W3Schools (Refsnes Data) (2023a) HTML Favicon. Available at: https://www.w3schools.com/html/html_favicon.asp (Accessed: 7th November 2023)
 
 Bootstrap Team (2023a) Bootstrap Download. Available at: https://getbootstrap.com/docs/5.3/getting-started/download/ (Accessed: 7th November 2023)
@@ -31,8 +30,16 @@ W3Schools (Refsnes Data) (2023j) Javascript Array map(). Available at: https://w
 
 W3Schools (Refsnes Data) (2023k) JavaScript Arrow Function. Available at: https://www.w3schools.com/js/js_arrow_function.asp (Accessed: 15th November 2023)
 
-W3Schools (Refsnes Data) (2023l) Javascript Aync. Available at: https://www.w3schools.com/js/js_async.asp (Accessed: 15th November 2023)
+W3Schools (Refsnes Data) (2023l) Javascript Async. Available at: https://www.w3schools.com/js/js_async.asp (Accessed: 15th November 2023)
 
-IMAGES:
+Bootstrap Team (2023b) Flex. Available at: https://getbootstrap.com/docs/5.3/utilities/flex/ (Accessed: 15th November 2023)
+
+Bootstrap Team (2023c) Navbar. Available at: https://getbootstrap.com/docs/5.3/components/navbar/ (Accessed: 15th November 2023)
+
+Stackoverflow (Roy) (2019) Bootstrap button dropdown not below button. Available at: https://stackoverflow.com/questions/35956194/bootstrap-button-dropdown-not-below-button (Accessed 15th November 2023)
+
+Frisch, Zak (2017) Generating a Table from an Array in Javascript. Available at: https://medium.com/wdstack/quick-blurb-generating-a-table-from-an-array-in-javascript-41386fd449a9 (Accessed 16th November 2023)
+
+# Image References (located in /images):
 
 favicon.png: Creazilla (2023) Stack of Books Clipart. Available at: https://creazilla.com/nodes/79607-stack-of-books-clipart (Accessed: 13th November 2023)
