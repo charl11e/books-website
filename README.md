@@ -40,6 +40,8 @@ Stackoverflow (Roy) (2019) Bootstrap button dropdown not below button. Available
 
 Frisch, Zak (2017) Generating a Table from an Array in Javascript. Available at: https://medium.com/wdstack/quick-blurb-generating-a-table-from-an-array-in-javascript-41386fd449a9 (Accessed 16th November 2023)
 
+MDN Web Docs (2023b) Window: sessionStorage property. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage (Accessed: 17th November 2023)
+
 # Image References (located in /images):
 
 favicon.png: Creazilla (2023) Stack of Books Clipart. Available at: https://creazilla.com/nodes/79607-stack-of-books-clipart (Accessed: 13th November 2023)
