@@ -80,8 +80,22 @@
         </div>
     </nav>
 
+
+    <!--Dropdown for table detail (W3Schools, 2023i)-->
+    <div class="container-fluid">
+        <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">
+            Table Detail
+        </button>
+        <ul class="dropdown-menu">
+            <li><button id="basic" type="button" class="dropdown-item active" onclick="document.getElementById('tabledatabasic').style.display='block'; document.getElementById('tabledatadetailed').style.display='none'; document.getElementById('basic').className='dropdown-item active'; document.getElementById('detailed').className='dropdown-item'">Basic</button></li>
+            <li><button id="detailed" type="button" class="dropdown-item" onclick="document.getElementById('tabledatabasic').style.display='none'; document.getElementById('tabledatadetailed').style.display='block'; document.getElementById('basic').className='dropdown-item'; document.getElementById('detailed').className='dropdown-item active'; tbdetailed()">Detailed</button></li>
+        </ul>
+        <i>&nbsp&nbsp&nbspPlease note: Detailed dataset may cause performance issues on older devices</i>
+    </div>
+
     <div class="container-fluid" id="table-container">
-        <p id="tabledata"></p>
+        <p id="tabledatabasic"></p>
+        <p id="tabledatadetailed"></p>
     </div>
 
 </body>

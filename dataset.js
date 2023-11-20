@@ -34,12 +34,12 @@ async function parse() {
 
     //Check if page is on full database, if so, load the table
     if (document.URL.includes("fulldataset.html")) {
-        setTimeout(tb, 500)
+        setTimeout(tbbasic, 500)
     }
 
     //Check if page is on search results, if so, load search results
     if (document.URL.includes("searchresults.html")) {
-        setTimeout(tbsearch, 500)
+        setTimeout(tbsearchbasic, 500)
     }
 
 parse()
