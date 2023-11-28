@@ -1,31 +1,40 @@
+//Check to see if data has been parsed AND DOM has loaded
+check = 0
+
 //Generate basic table for full data set (Frisch, 2017) (W3Schools, 2023l)
 function tbbasic() {
-    let table = document.createElement('table');
+    if (check == 0) {
+        check+=1
+    }
+    else {
+        let table = document.createElement('table');
     
-    table.insertRow();
-    let newCellMain1 = table.rows[table.rows.length - 1].insertCell();
-    newCellMain1.style = "font-weight:bold; font-size:20px"
-    newCellMain1.textContent = "Title"
-    
-    let newCellMain2 = table.rows[table.rows.length - 1].insertCell();
-    newCellMain2.style = "font-weight:bold; font-size:20px"
-    newCellMain2.textContent = "Author(s)"
-
-    let newCellMain3 = table.rows[table.rows.length - 1].insertCell();
-    newCellMain3.style = "font-weight:bold; font-size:20px"
-    newCellMain3.textContent = "ISBN"
-    
-    for (let i=0; i< books.length-1; i++) {
         table.insertRow();
-        let newCell1 = table.rows[table.rows.length - 1].insertCell();
-        newCell1.textContent = books[i].title;
-        let newCell2 = table.rows[table.rows.length - 1].insertCell();
-        newCell2.textContent = books[i].authors;
-        let newCell3 = table.rows[table.rows.length - 1].insertCell();
-        newCell3.textContent = books[i].isbn
-    };
+        let newCellMain1 = table.rows[table.rows.length - 1].insertCell();
+        newCellMain1.style = "font-weight:bold; font-size:20px"
+        newCellMain1.textContent = "Title"
     
-    document.getElementById('tabledatabasic').appendChild(table);
+        let newCellMain2 = table.rows[table.rows.length - 1].insertCell();
+        newCellMain2.style = "font-weight:bold; font-size:20px"
+        newCellMain2.textContent = "Author(s)"
+
+        let newCellMain3 = table.rows[table.rows.length - 1].insertCell();
+        newCellMain3.style = "font-weight:bold; font-size:20px"
+        newCellMain3.textContent = "ISBN"
+    
+        for (let i=0; i< books.length-1; i++) {
+            table.insertRow();
+            let newCell1 = table.rows[table.rows.length - 1].insertCell();
+            newCell1.textContent = books[i].title;
+            let newCell2 = table.rows[table.rows.length - 1].insertCell();
+            newCell2.textContent = books[i].authors;
+            let newCell3 = table.rows[table.rows.length - 1].insertCell();
+            newCell3.textContent = books[i].isbn
+        };
+    
+        document.getElementById('tabledatabasic').appendChild(table);
+
+    }
 };
 
 //Generate detailed table for full data set (Frisch, 2017) (W3Schools, 2023l)
@@ -115,41 +124,47 @@ function tbdetailed() {
 
 //Generate basic table for search results (Frsich, 2017) (W3Schools, 2023l) (MDN Web Docs, 2023b)
 function tbsearchbasic () {
-    var searchhits = sessionStorage.getItem("search")
-    if (searchhits.length == 0) {
-        document.getElementById('tabledatasearchbasic').innerHTML = "Nothing found";
+    if (check == 0) {
+        check+=1
     }
-
     else {
-        let searchtable = document.createElement('table');
+        var searchhits = sessionStorage.getItem("search")
+        if (searchhits.length == 0) {
+            document.getElementById('tabledatasearchbasic').innerHTML = "Nothing found";
+        }
 
-        searchtable.insertRow();
-        let newCellMain1 = searchtable.rows[searchtable.rows.length - 1].insertCell();
-        newCellMain1.style = "font-weight:bold; font-size:20px"
-        newCellMain1.textContent = "Title"
+        else {
+            let searchtable = document.createElement('table');
 
-        let newCellMain2 = searchtable.rows[searchtable.rows.length - 1].insertCell();
-        newCellMain2.style = "font-weight:bold; font-size:20px"
-        newCellMain2.textContent = "Author(s)"
-    
-        let newCellMain3 = searchtable.rows[searchtable.rows.length - 1].insertCell();
-        newCellMain3.style = "font-weight:bold; font-size:20px"
-        newCellMain3.textContent = "ISBN"
+            searchtable.insertRow();
+            let newCellMain1 = searchtable.rows[searchtable.rows.length - 1].insertCell();
+            newCellMain1.style = "font-weight:bold; font-size:20px"
+            newCellMain1.textContent = "Title"
 
-        for (let i=0; i< books.length-1; i++) {
-            if (searchhits.includes(books[i].isbn)) {
-                searchtable.insertRow();
-                let newCell1 = searchtable.rows[searchtable.rows.length - 1].insertCell();
-                newCell1.textContent = books[i].title;
-                let newCell2 = searchtable.rows[searchtable.rows.length - 1].insertCell();
-                newCell2.textContent = books[i].authors;
-                let newCell3 = searchtable.rows[searchtable.rows.length - 1].insertCell();
-                newCell3.textContent = books[i].isbn
-            }
-        };
+            let newCellMain2 = searchtable.rows[searchtable.rows.length - 1].insertCell();
+            newCellMain2.style = "font-weight:bold; font-size:20px"
+            newCellMain2.textContent = "Author(s)"
+        
+            let newCellMain3 = searchtable.rows[searchtable.rows.length - 1].insertCell();
+            newCellMain3.style = "font-weight:bold; font-size:20px"
+            newCellMain3.textContent = "ISBN"
 
-        document.getElementById('tabledatasearchbasic').appendChild(searchtable);
+            for (let i=0; i< books.length-1; i++) {
+                if (searchhits.includes(books[i].isbn)) {
+                    searchtable.insertRow();
+                    let newCell1 = searchtable.rows[searchtable.rows.length - 1].insertCell();
+                    newCell1.textContent = books[i].title;
+                    let newCell2 = searchtable.rows[searchtable.rows.length - 1].insertCell();
+                    newCell2.textContent = books[i].authors;
+                    let newCell3 = searchtable.rows[searchtable.rows.length - 1].insertCell();
+                    newCell3.textContent = books[i].isbn
+                }
+            };
+
+            document.getElementById('tabledatasearchbasic').appendChild(searchtable);
+        }
     }
+    
 }
 
 //Generate detailed table for search results (Frsich, 2017) (W3Schools, 2023l) (MDN Web Docs, 2023b)

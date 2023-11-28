@@ -18,28 +18,33 @@ class book {
     }
 }
 
-
-//Fetch CSV file and parse it (W3Schools, 2023d) (MDN Web Docs, 2023a) (W3Schools, 2023e)  (W3Schools, 2023f) (W3Schools, 2023g) (W3Schools, 2023j) (W3Schools, 2023k) (W3Schools, 2023l)
+//Fetch CSV file and parse it (W3Schools, 2023d) (MDN Web Docs, 2023a) (W3Schools, 2023e) (W3Schools, 2023g) (W3Schools, 2023k) (W3Schools, 2023l)
 let books = new Array();
-
-async function parse() {
-    let response = await fetch('data.csv');
-    let responsetext = await response.text();
-    let lines = responsetext.split('\n');
-    let data = lines.map(line => line.split(','));
-    for(let i=1; i< data.length-1; i++) {
-        books.push(new book(data[i][0], data[i][1], data[i][2], data[i][3], data[i][4], data[i][5], data[i][6], data[i][7], data[i][8], data[i][9], data[i][10], data[i][11]))
+d3.csv("data.csv").then(data => {
+    for(let i=0; i< data.length; i++) {
+        books.push(new book(data[i].bookID, data[i].title, data[i].authors, data[i].average_rating, data[i].isbn, data[i].isbn13, data[i].language_code, data[i].num_pages, data[i].ratings_count, data[i].text_reviews_count, data[i].publication_date, data[i].publisher))
         };
-    }
-
+    
     //Check if page is on full database, if so, load the table
     if (document.URL.includes("fulldataset.html")) {
-        setTimeout(tbbasic, 500)
+        tbbasic()
     }
 
     //Check if page is on search results, if so, load search results
     if (document.URL.includes("searchresults.html")) {
-        setTimeout(tbsearchbasic, 500)
+        tbsearchbasic()
+    }
+})
+
+//Check if DOM has loaded (MDN Web Docs, 2023c)
+addEventListener("DOMContentLoaded", (event) => {
+    //Check if page is on full database, if so, load the table
+    if (document.URL.includes("fulldataset.html")) {
+        tbbasic()
     }
 
-parse()
+    //Check if page is on search results, if so, load search results
+    if (document.URL.includes("searchresults.html")) {
+        tbsearchbasic()
+    }
+})

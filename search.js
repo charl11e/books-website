@@ -102,7 +102,6 @@ function search() {
 }
 
 //Makes Filter work
-
 function filter(n) {
     if (document.getElementById(n).className == 'dropdown-item active') {
         document.getElementById(n).className='dropdown-item'

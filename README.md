@@ -18,15 +18,11 @@ MDN Web Docs (2023a) Using the Fetch API. Available at: https://developer.mozill
 
 W3Schools (Refsnes Data) (2023e) Javascript Promises. Available at: https://www.w3schools.com/js/js_promise.asp (Accessed: 9th November 2023)
 
-W3Schools (Refsnes Data) (2023f) Javascript String split(). Available at: https://www.w3schools.com/jsref/jsref_split.asp (Accessed: 9th November 2023)
-
 W3Schools (Refsnes Data) (2023g) Javascript Array Methods. Available at: https://www.w3schools.com/js/js_array_methods.asp (Accessed: 9th November 2023)
 
 W3Schools (Refsnes Data) (2023h) Bootstrap Navigation Bar. Available at: https://www.w3schools.com/bootstrap/bootstrap_navbar.asp (Accessed: 13th November 2023)
 
 W3Schools (Refsnes Data) (2023i) Bootstrap 5 Dropdowns. Available at: https://www.w3schools.com/bootstrap5/bootstrap_dropdowns.php (Accessed: 13th November 2023)
-
-W3Schools (Refsnes Data) (2023j) Javascript Array map(). Available at: https://www.w3schools.com/jsref/jsref_map.asp (Accessed: 15th November 2023)
 
 W3Schools (Refsnes Data) (2023k) JavaScript Arrow Function. Available at: https://www.w3schools.com/js/js_arrow_function.asp (Accessed: 15th November 2023)
 
@@ -41,6 +37,8 @@ Stackoverflow (Roy) (2019) Bootstrap button dropdown not below button. Available
 Frisch, Zak (2017) Generating a Table from an Array in Javascript. Available at: https://medium.com/wdstack/quick-blurb-generating-a-table-from-an-array-in-javascript-41386fd449a9 (Accessed 16th November 2023)
 
 MDN Web Docs (2023b) Window: sessionStorage property. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage (Accessed: 17th November 2023)
+
+MDN Web Docs (2023c) Document: DOMContentLoaded event. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event (Accessed: 28th November 2023)
 
 # Image References (located in /images):
 
