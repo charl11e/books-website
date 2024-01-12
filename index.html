@@ -14,7 +14,11 @@
     <!--D3 Integration-->
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
-    
+
+    <!--Plot Integration (Observable HQ, 2023a)-->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>    
+
     <!--Link CSS sheet & Javascript scripts-->
     <link href="css.css" rel="stylesheet">
     <script src="search.js"></script>
@@ -83,6 +87,47 @@
             </div>
         </div>
     </nav>
+
+    <!--Content-->
+    <div class="container-fluid">
+        <h1>Books Dataset</h1>
+        <i>All content/data/visualisations on this website is based on the 'Goodreads-books' dataset on Kaggle: https://www.kaggle.com/datasets/jealousleopard/goodreadsbooks <br>This data was taken entirely from the Goodreads API</i>
+        <br><br>
+        <p>The goal of this website is to present the data from this dataset in several different ways, allowing you to easily navigate it</p>
+        <br>
+        <h2>This website has several methods for navigating this dataset:</h2>
+        <p>
+            <ul>
+                <li>Using the search bar on the navigation bar <i>(Please note your search term must be exact and you must filter your results)</i></li>
+                <li>Using the full dataset page to view the entire dataset</li>
+            </ul>
+        </p>
+    </div>
+
+    <!--Graphs-->
+    <br>
+    <div class="container-fluid">
+        <h2>Visualisations</h2>
+        <p>Below are some visualisations of the data in this dataset</p>
+    </div>
+
+    <!--Graph for number of pages for books-->
+    <div class="container-fluid" id="numpages">
+        <h3>Number of Pages for Books</h3>
+        <p>This graph shows the number of pages for each book in the dataset
+            <br>Note: All books with >2000 pages have been truncated to make graph more readable
+        </p>
+    </div>
+
+    <!--Graph for average rating of books-->
+    <div class="container-fluid" id="averagerating">
+        <h3>Average Rating for Books</h3>
+        <p>This graph shows the average rating for books in the dataset</p>
+        <br>
+    </div>
+    
+    <!--Import data visualisations-->
+    <script src="visualisations.js"></script>
 
 </body>
 

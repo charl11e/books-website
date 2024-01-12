@@ -1,4 +1,4 @@
-/* Stackoverflow (2019) */
+/* (Stackoverflow, 2019) */
 #dropdown-position {
     position:relative;
 }
@@ -10,4 +10,22 @@ table, th, td {
 
 #table-container {
     padding:30px;
+}
+
+
+/* For data visualisations (Medium, 2020) */
+#numpages {
+    margin-left:1%;
+    width:45%;
+    background-color:white;
+    color:black;
+    float:left;
+}
+
+#averagerating {
+    margin-right:1%;
+    width:45%;
+    background-color:white;
+    color:black;
+    float:right;
 }

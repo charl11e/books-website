@@ -40,6 +40,12 @@ MDN Web Docs (2023b) Window: sessionStorage property. Available at: https://deve
 
 MDN Web Docs (2023c) Document: DOMContentLoaded event. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event (Accessed: 28th November 2023)
 
-# Image References (located in /images):
+Observable HQ (2023a) Getting Started. Available at: https://observablehq.com/plot/getting-started (Accessed: 5th December 2023)
 
+Medium (2020) How to Position HTML Elements Side by Side with CSS. Available at: https://codeburst.io/how-to-position-html-elements-side-by-side-with-css-e1fae72ddcc (Accessed: 12th January 2024)
+
+# Image References (located in /images):
 favicon.png: Creazilla (2023) Stack of Books Clipart. Available at: https://creazilla.com/nodes/79607-stack-of-books-clipart (Accessed: 13th November 2023)
+
+# File/Graph References (located in /graphdata):
+Data (and the subsequent graphs generated from this data) in this file were generated from the original dataset with the help of Observable (2024a) Programming Summative Workspace. Available at: https://observablehq.com/d/553208699f3eb252 (Accessed: 11th January 2024) 
