@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang = "en-uk" data-bs-theme="dark">
+<html lang = "en-GB" data-bs-theme="dark">
 
 <head>
+    <!--Set characterset-->
+    <meta charset="utf-8">
+
     <!--Title & Favicon (W3Schools, 2023a)-->
     <title>Pocket Library</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 
-    
     <!--Bootstrap Integration (Bootstrap Team, 2023a)-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -14,18 +16,19 @@
     <!--D3 Integration-->
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
-    
+
+    <!--Plot Integration (Observable HQ, 2023a)-->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>    
+
     <!--Link CSS sheet & Javascript scripts-->
     <link href="css.css" rel="stylesheet">
     <script src="search.js"></script>
-    <script src="datasettable.js"></script>
     <script src="dataset.js"></script>
+    <script src="datasettable.js"></script>
 
     <!--Set Viewport (helps scaling on mobile devices) (W3Schools, 2023b)-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--Set characterset-->
-    <meta charset="utf-8">
 
 </head>
 
@@ -53,15 +56,15 @@
                 <!--Search Bar (Olawanle, 2023) (W3Schools, 2023c) (Bootstrap Team, 2023b) (Bootstrap Team, 2023c)-->
                 <div class="d-flex flex-row-reverse">
                     <form class="d-flex" role="search" id="searchform" action="/searchresults.html" onsubmit="search()">
-                        <input class="form-control me-2" type="text" id="searchquery" class="" placeholder="Enter your search:">
-                        <button type="search" class="btn btn-default" id="submit"><img src="/images/search.png" height="30"></button>
+                        <input class="form-control me-2" type="text" id="searchquery" placeholder="Enter your search:">
+                        <button class="btn btn-default" id="submit"><img src="/images/search.png" height="30" alt="Search"></button>
                     </form>
 
                     <!--Filter for search bar (W3Schools, 2023i)-->
                     <div id="dropdown-position">
                         <div class ="search-filter">
                             <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
-                                <img src="/images/filter.png" height="30">
+                                <img src="/images/filter.png" height="30" alt="Filter">
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a id="title" class="dropdown-item" href="#" onclick="filter('title')">Title</a></li>
@@ -94,7 +97,7 @@
             <li><button id="basic" type="button" class="dropdown-item active" onclick="document.getElementById('tabledatabasic').style.display='block'; document.getElementById('tabledatadetailed').style.display='none'; document.getElementById('basic').className='dropdown-item active'; document.getElementById('detailed').className='dropdown-item'">Basic</button></li>
             <li><button id="detailed" type="button" class="dropdown-item" onclick="document.getElementById('tabledatabasic').style.display='none'; document.getElementById('tabledatadetailed').style.display='block'; document.getElementById('basic').className='dropdown-item'; document.getElementById('detailed').className='dropdown-item active'; tbdetailed()">Detailed</button></li>
         </ul>
-        <i>&nbsp&nbsp&nbspPlease note: Detailed dataset may cause performance issues on older devices</i>
+        <i>&nbsp;&nbsp;&nbsp;Please note: Detailed dataset may cause performance issues on older devices</i>
     </div>
 
     <div class="container-fluid" id="table-container">

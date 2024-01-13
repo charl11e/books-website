@@ -1,12 +1,32 @@
-//Check to see if data has been parsed AND DOM has loaded
+//This JS file contains the code that loads the tables for the full dataset and search results pages.
+//I decided to add a full dataset page, so the user can simply view the dataset if needed.
+//Furthermore, it is split into a 'basic' table and a 'detailed' table, the reason being that the detailed table contains extra details that may not be useful to the average user, so the basic table can be loaded more quickly.
+//However, the detailed table is available to view with a dropdown if needed (but may be slow to load)
+
+//Additionally, I decided to add a search function to the website, as I thought it would be useful to search for specific item(s) in the dataset if needed.
+//To use it, the user needs to decide using the 'filter' button what parts of the book (i.e. title/author/isbn etc) they are searching for, and simply search for it using the search bar on the navbar.
+//For similar reasons, the search function is split into two differemt tables aswell.
+//The only limitations in the search function are that it is case sensitive and only searches for exact matches.
+
+
+//Check to see if data has been parsed AND DOM has loaded (this is incremented when the data is parsed, and when the DOM has loaded by calling the tbbasic() function), once it = 2, it is safe to load the tables
 check = 0
 
+
 //Generate basic table for full data set (Frisch, 2017) (W3Schools, 2023l)
+/**
+ * @function tbbasic
+ * @description Generate basic table for full data set tab of website
+ * @returns {void}
+ */
+
 function tbbasic() {
+    //Check to see if data has been parsed and DOM has been loaded
     if (check == 0) {
         check+=1
     }
     else {
+        //Create a table object, and insert the headers
         let table = document.createElement('table');
     
         table.insertRow();
@@ -21,7 +41,8 @@ function tbbasic() {
         let newCellMain3 = table.rows[table.rows.length - 1].insertCell();
         newCellMain3.style = "font-weight:bold; font-size:20px"
         newCellMain3.textContent = "ISBN"
-    
+
+        //Insert the data into the table
         for (let i=0; i< books.length-1; i++) {
             table.insertRow();
             let newCell1 = table.rows[table.rows.length - 1].insertCell();
@@ -31,15 +52,24 @@ function tbbasic() {
             let newCell3 = table.rows[table.rows.length - 1].insertCell();
             newCell3.textContent = books[i].isbn
         };
-    
+        
+        //Append the table to the page
         document.getElementById('tabledatabasic').appendChild(table);
 
     }
 };
 
+
 //Generate detailed table for full data set (Frisch, 2017) (W3Schools, 2023l)
+/**
+ * @function tbdetailed
+ * @description Generate detailed table for full data set tab of website
+ * @returns {void}
+ */
+
 function tbdetailed() {
     document.getElementById('tabledatadetailed').innerHTML = "";
+    //Create a table object, and insert the headers
     let table = document.createElement('table');
     
     table.insertRow();
@@ -91,6 +121,7 @@ function tbdetailed() {
     newCellMain12.style = "font-weight:bold; font-size:20px"
     newCellMain12.textContent = "Book ID"
     
+    //Insert the data into the table
     for (let i=0; i< books.length-1; i++) {
         table.insertRow();
         let newCell1 = table.rows[table.rows.length - 1].insertCell();
@@ -119,21 +150,32 @@ function tbdetailed() {
         newCell12.textContent = books[i].bookID
     };
     
+    //Append the table to the page
     document.getElementById('tabledatadetailed').appendChild(table);
 };
 
+
 //Generate basic table for search results (Frsich, 2017) (W3Schools, 2023l) (MDN Web Docs, 2023b)
+/**
+ * @function tbsearchbasic
+ * @description Generate basic table for search results tab of website
+ * @returns {void}
+ */
+
 function tbsearchbasic () {
+    //Check to see if data has been parsed and DOM has been loaded
     if (check == 0) {
         check+=1
     }
     else {
+        //Get search results from session storage, and check if there are any results
         var searchhits = sessionStorage.getItem("search")
         if (searchhits.length == 0) {
             document.getElementById('tabledatasearchbasic').innerHTML = "Nothing found";
         }
 
         else {
+            //If there are, create a table object, and insert the headers, then insert the data into the table
             let searchtable = document.createElement('table');
 
             searchtable.insertRow();
@@ -161,20 +203,30 @@ function tbsearchbasic () {
                 }
             };
 
+            //Append the table to the page
             document.getElementById('tabledatasearchbasic').appendChild(searchtable);
         }
     }
     
 }
 
+
 //Generate detailed table for search results (Frsich, 2017) (W3Schools, 2023l) (MDN Web Docs, 2023b)
+/**
+ * @function tbsearchdetailed
+ * @description Generate detailed table for search results tab of website
+ * @returns {void}
+ */
+
 function tbsearchdetailed () {
+    //Get search results from session storage, and check if there are any results
     var searchhits = sessionStorage.getItem("search")
     if (searchhits.length == 0) {
         document.getElementById('tabledatasearchdetailed').innerHTML = "Nothing found";
     }
 
     else {
+        //If there are, create a table object, and insert the headers, then insert the data into the table
         let searchtable = document.createElement('table');
 
         searchtable.insertRow();
@@ -256,7 +308,8 @@ function tbsearchdetailed () {
 
             }
         };
-
+        
+        //Append the table to the page
         document.getElementById('tabledatasearchdetailed').appendChild(searchtable);
     }
 }

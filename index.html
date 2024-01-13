@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang = "en-uk" data-bs-theme="dark">
+<html lang = "en-GB" data-bs-theme="dark">
 
 <head>
+    <!--Set characterset-->
+    <meta charset="utf-8">
+
     <!--Title & Favicon (W3Schools, 2023a)-->
     <title>Pocket Library</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
 
-    
     <!--Bootstrap Integration (Bootstrap Team, 2023a)-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -27,9 +29,6 @@
 
     <!--Set Viewport (helps scaling on mobile devices) (W3Schools, 2023b)-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!--Set characterset-->
-    <meta charset="utf-8">
 
 </head>
 
@@ -57,15 +56,15 @@
                 <!--Search Bar (Olawanle, 2023) (W3Schools, 2023c) (Bootstrap Team, 2023b) (Bootstrap Team, 2023c)-->
                 <div class="d-flex flex-row-reverse">
                     <form class="d-flex" role="search" id="searchform" action="/searchresults.html" onsubmit="search()">
-                        <input class="form-control me-2" type="text" id="searchquery" class="" placeholder="Enter your search:">
-                        <button type="search" class="btn btn-default" id="submit"><img src="/images/search.png" height="30"></button>
+                        <input class="form-control me-2" type="text" id="searchquery" placeholder="Enter your search:">
+                        <button class="btn btn-default" id="submit"><img src="/images/search.png" height="30" alt="Search"></button>
                     </form>
 
                     <!--Filter for search bar (W3Schools, 2023i)-->
                     <div id="dropdown-position">
                         <div class ="search-filter">
                             <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
-                                <img src="/images/filter.png" height="30">
+                                <img src="/images/filter.png" height="30" alt="Filter">
                             </button>
                             <ul class="dropdown-menu">
                                 <li><a id="title" class="dropdown-item" href="#" onclick="filter('title')">Title</a></li>
@@ -96,12 +95,11 @@
         <p>The goal of this website is to present the data from this dataset in several different ways, allowing you to easily navigate it</p>
         <br>
         <h2>This website has several methods for navigating this dataset:</h2>
-        <p>
-            <ul>
-                <li>Using the search bar on the navigation bar <i>(Please note your search term must be exact and you must filter your results)</i></li>
-                <li>Using the full dataset page to view the entire dataset</li>
-            </ul>
-        </p>
+        <ul>
+            <li>Using the search bar on the navigation bar <i>(Please note your search term must be exact and you must filter your results)</i></li>
+            <li>Using the full dataset page to view the entire dataset</li>
+            <li>By looking at the visualisations/graphs of some parts of the data below</li>
+        </ul>
     </div>
 
     <!--Graphs-->
@@ -130,5 +128,4 @@
     <script src="visualisations.js"></script>
 
 </body>
-
 </html>

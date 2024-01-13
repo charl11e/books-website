@@ -1,4 +1,14 @@
+//This JS file contains the code that makes the search bar and filter work.
+//When finding search results, the search function will search the dataset for the search term, and will add the ISBN of any book that matches the search term to an array
+//The array is then stored in session storage (so it can be accessed later by the results page), and the user is redirected to the results page
+
 //Makes Search Bar Work (MDN Web Docs, 2023b)
+/**
+ * @function search
+ * @description Searches the database for the search term
+ * @returns {void}
+ */
+
 function search() {
     let searchhits = new Array();
     let searchterm = document.getElementById("searchquery").value;
@@ -102,6 +112,15 @@ function search() {
 }
 
 //Makes Filter work
+//When filtering, the filter function will change the class of the dropdown item to active or not active
+//The search function will then work by checking if the class of the dropdown item is active or not
+/**
+ * @function filter
+ * @description Filters the search results by the column(s) selected
+ * @param {string} n The column to filter by
+ * @returns {void}
+ */
+
 function filter(n) {
     if (document.getElementById(n).className == 'dropdown-item active') {
         document.getElementById(n).className='dropdown-item'
