@@ -1,6 +1,13 @@
 # Programming Gold Summative Website
 Based on the dataset 'Goodreads-books' https://www.kaggle.com/datasets/jealousleopard/goodreadsbooks
 
+# Notes:
+- All code is commented throughout to justify features and choices NEEDTO: Justify HTML choices
+- NEEDTO: JSDoc files located in 'out' folder
+- NEEDTO: ESLint
+- NEEDTO: .git file is attached to assignment, but I have also attached photos of my git history
+- All references for code/images not included in the lecture material are below
+
 # References:
 W3Schools (Refsnes Data) (2023a) HTML Favicon. Available at: https://www.w3schools.com/html/html_favicon.asp (Accessed: 7th November 2023)
 
