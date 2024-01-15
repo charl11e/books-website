@@ -2,6 +2,9 @@
 // When finding search results, the search function will search the dataset for the search term, and will add the ISBN of any book that matches the search term to an array
 // The array is then stored in session storage (so it can be accessed later by the results page), and the user is redirected to the results page
 
+// Declare that books and sessionStorage are global variables for ESLint (ESLint, 2023a)
+/* global books, sessionStorage */
+
 // Makes Search Bar Work (MDN Web Docs, 2023b)
 /**
  * @function search
@@ -9,101 +12,102 @@
  * @returns {void}
  */
 
+// eslint-disable-next-line no-unused-vars -- Disabled as this function is indeed called from the HTML files
 function search () {
-    const searchhits = new Array();
+    const searchhits = [];
     const searchterm = document.getElementById('searchquery').value;
 
-    if (document.getElementById('title').className == 'dropdown-item active') {
+    if (document.getElementById('title').className === 'dropdown-item active') {
         for (let i = 0; i < books.length; i++) {
-            if (searchterm == books[i].title) {
+            if (searchterm === books[i].title) {
                 searchhits.push(books[i].isbn);
             };
         };
     }
 
-    if (document.getElementById('authors').className == 'dropdown-item active') {
+    if (document.getElementById('authors').className === 'dropdown-item active') {
         for (let i = 0; i < books.length; i++) {
-            if (searchterm == books[i].authors) {
+            if (searchterm === books[i].authors) {
                 searchhits.push(books[i].isbn);
             };
         };
     }
 
-    if (document.getElementById('average_rating').className == 'dropdown-item active') {
+    if (document.getElementById('averageRating').className === 'dropdown-item active') {
         for (let i = 0; i < books.length; i++) {
-            if (searchterm == books[i].average_rating) {
+            if (searchterm === books[i].averageRating) {
                 searchhits.push(books[i].isbn);
             };
         };
     }
 
-    if (document.getElementById('isbn').className == 'dropdown-item active') {
+    if (document.getElementById('isbn').className === 'dropdown-item active') {
         for (let i = 0; i < books.length; i++) {
-            if (searchterm == books[i].isbn) {
+            if (searchterm === books[i].isbn) {
                 searchhits.push(books[i].isbn);
             };
         };
     }
 
-    if (document.getElementById('isbn13').className == 'dropdown-item active') {
+    if (document.getElementById('isbn13').className === 'dropdown-item active') {
         for (let i = 0; i < books.length; i++) {
-            if (searchterm == books[i].isbn13) {
+            if (searchterm === books[i].isbn13) {
                 searchhits.push(books[i].isbn);
             };
         };
     }
 
-    if (document.getElementById('language_code').className == 'dropdown-item active') {
+    if (document.getElementById('languageCode').className === 'dropdown-item active') {
         for (let i = 0; i < books.length; i++) {
-            if (searchterm == books[i].language_code) {
+            if (searchterm === books[i].languageCode) {
                 searchhits.push(books[i].isbn);
             };
         };
     }
 
-    if (document.getElementById('num_pages').className == 'dropdown-item active') {
+    if (document.getElementById('numPages').className === 'dropdown-item active') {
         for (let i = 0; i < books.length; i++) {
-            if (searchterm == books[i].num_pages) {
+            if (searchterm === books[i].numPages) {
                 searchhits.push(books[i].isbn);
             };
         };
     }
 
-    if (document.getElementById('ratings_count').className == 'dropdown-item active') {
+    if (document.getElementById('ratingsCount').className === 'dropdown-item active') {
         for (let i = 0; i < books.length; i++) {
-            if (searchterm == books[i].ratings_count) {
+            if (searchterm === books[i].ratingsCount) {
                 searchhits.push(books[i].isbn);
             };
         };
     }
 
-    if (document.getElementById('text_reviews_count').className == 'dropdown-item active') {
+    if (document.getElementById('textReviewsCount').className === 'dropdown-item active') {
         for (let i = 0; i < books.length; i++) {
-            if (searchterm == books[i].text_reviews_count) {
+            if (searchterm === books[i].textReviewsCount) {
                 searchhits.push(books[i].isbn);
             };
         };
     }
 
-    if (document.getElementById('publication_date').className == 'dropdown-item active') {
+    if (document.getElementById('publicationDate').className === 'dropdown-item active') {
         for (let i = 0; i < books.length; i++) {
-            if (searchterm == books[i].publication_date) {
+            if (searchterm === books[i].publicationDate) {
                 searchhits.push(books[i].isbn);
             };
         };
     }
 
-    if (document.getElementById('publisher').className == 'dropdown-item active') {
+    if (document.getElementById('publisher').className === 'dropdown-item active') {
         for (let i = 0; i < books.length; i++) {
-            if (searchterm == books[i].publisher) {
+            if (searchterm === books[i].publisher) {
                 searchhits.push(books[i].isbn);
             };
         };
     }
 
-    if (document.getElementById('bookid').className == 'dropdown-item active') {
+    if (document.getElementById('bookid').className === 'dropdown-item active') {
         for (let i = 0; i < books.length; i++) {
-            if (searchterm == books[i].bookID) {
+            if (searchterm === books[i].bookID) {
                 searchhits.push(books[i].isbn);
             };
         };
@@ -121,8 +125,9 @@ function search () {
  * @returns {void}
  */
 
+// eslint-disable-next-line no-unused-vars -- Disabled as this function is indeed called from the HTML files
 function filter (n) {
-    if (document.getElementById(n).className == 'dropdown-item active') {
+    if (document.getElementById(n).className === 'dropdown-item active') {
         document.getElementById(n).className = 'dropdown-item';
     } else {
         document.getElementById(n).className = 'dropdown-item active';

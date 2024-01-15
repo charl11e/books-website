@@ -6,6 +6,7 @@ Based on the dataset 'Goodreads-books' https://www.kaggle.com/datasets/jealousle
 - NEEDTO: JSDoc files located in 'out' folder
 - NEEDTO: ESLint
 - NEEDTO: .git file is attached to assignment, but I have also attached photos of my git history
+- NEEDTO: organise reference list
 - All references for code/images not included in the lecture material are below
 
 # References:
@@ -50,6 +51,8 @@ MDN Web Docs (2023c) Document: DOMContentLoaded event. Available at: https://dev
 Observable HQ (2023a) Getting Started. Available at: https://observablehq.com/plot/getting-started (Accessed: 5th December 2023)
 
 Medium (2020) How to Position HTML Elements Side by Side with CSS. Available at: https://codeburst.io/how-to-position-html-elements-side-by-side-with-css-e1fae72ddcc (Accessed: 12th January 2024)
+
+ESLint (2023a) Configure Language Options. Available at: https://eslint.org/docs/latest/use/configure/language-options#specifying-globals (Accessed: 15th January 2024)
 
 # Image References (located in /images):
 favicon.png: Creazilla (2023) Stack of Books Clipart. Available at: https://creazilla.com/nodes/79607-stack-of-books-clipart (Accessed: 13th November 2023)

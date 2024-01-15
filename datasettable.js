@@ -8,8 +8,11 @@
 // For similar reasons, the search function is split into two differemt tables aswell.
 // The only limitations in the search function are that it is case sensitive and only searches for exact matches.
 
+// Declare that books and sessionStorage are global variables for ESLint (ESLint, 2023a)
+/* global books, sessionStorage */
+
 // Check to see if data has been parsed AND DOM has loaded (this is incremented when the data is parsed, and when the DOM has loaded by calling the tbbasic() function), once it = 2, it is safe to load the tables
-check = 0;
+let check = 0;
 
 // Generate basic table for full data set (Frisch, 2017) (W3Schools, 2023l)
 /**
@@ -18,9 +21,10 @@ check = 0;
  * @returns {void}
  */
 
+// eslint-disable-next-line no-unused-vars -- Disabled as this function is called from another file
 function tbbasic () {
     // Check to see if data has been parsed and DOM has been loaded
-    if (check == 0) {
+    if (check === 0) {
         check += 1;
     } else {
         // Create a table object, and insert the headers
@@ -62,6 +66,7 @@ function tbbasic () {
  * @returns {void}
  */
 
+// eslint-disable-next-line no-unused-vars -- Disabled as this function is called from another file
 function tbdetailed () {
     document.getElementById('tabledatadetailed').innerHTML = '';
     // Create a table object, and insert the headers
@@ -128,19 +133,19 @@ function tbdetailed () {
         const newCell4 = table.rows[table.rows.length - 1].insertCell();
         newCell4.textContent = books[i].isbn13;
         const newCell5 = table.rows[table.rows.length - 1].insertCell();
-        newCell5.textContent = books[i].language_code;
+        newCell5.textContent = books[i].languageCode;
         const newCell6 = table.rows[table.rows.length - 1].insertCell();
-        newCell6.textContent = books[i].average_rating;
+        newCell6.textContent = books[i].averageRating;
         const newCell7 = table.rows[table.rows.length - 1].insertCell();
-        newCell7.textContent = books[i].ratings_count;
+        newCell7.textContent = books[i].ratingsCount;
         const newCell8 = table.rows[table.rows.length - 1].insertCell();
-        newCell8.textContent = books[i].text_reviews_count;
+        newCell8.textContent = books[i].textReviewsCount;
         const newCell9 = table.rows[table.rows.length - 1].insertCell();
-        newCell9.textContent = books[i].publication_date;
+        newCell9.textContent = books[i].publicationDate;
         const newCell10 = table.rows[table.rows.length - 1].insertCell();
         newCell10.textContent = books[i].publisher;
         const newCell11 = table.rows[table.rows.length - 1].insertCell();
-        newCell11.textContent = books[i].num_pages;
+        newCell11.textContent = books[i].numPages;
         const newCell12 = table.rows[table.rows.length - 1].insertCell();
         newCell12.textContent = books[i].bookID;
     };
@@ -156,14 +161,15 @@ function tbdetailed () {
  * @returns {void}
  */
 
+// eslint-disable-next-line no-unused-vars -- Disabled as this function is called from another file
 function tbsearchbasic () {
     // Check to see if data has been parsed and DOM has been loaded
-    if (check == 0) {
+    if (check === 0) {
         check += 1;
     } else {
         // Get search results from session storage, and check if there are any results
         const searchhits = sessionStorage.getItem('search');
-        if (searchhits.length == 0) {
+        if (searchhits.length === 0) {
             document.getElementById('tabledatasearchbasic').innerHTML = 'Nothing found';
         } else {
             // If there are, create a table object, and insert the headers, then insert the data into the table
@@ -207,10 +213,11 @@ function tbsearchbasic () {
  * @returns {void}
  */
 
+// eslint-disable-next-line no-unused-vars -- Disabled as this function is called from another file
 function tbsearchdetailed () {
     // Get search results from session storage, and check if there are any results
     const searchhits = sessionStorage.getItem('search');
-    if (searchhits.length == 0) {
+    if (searchhits.length === 0) {
         document.getElementById('tabledatasearchdetailed').innerHTML = 'Nothing found';
     } else {
         // If there are, create a table object, and insert the headers, then insert the data into the table
@@ -277,19 +284,19 @@ function tbsearchdetailed () {
                 const newCell4 = searchtable.rows[searchtable.rows.length - 1].insertCell();
                 newCell4.textContent = books[i].isbn13;
                 const newCell5 = searchtable.rows[searchtable.rows.length - 1].insertCell();
-                newCell5.textContent = books[i].language_code;
+                newCell5.textContent = books[i].languageCode;
                 const newCell6 = searchtable.rows[searchtable.rows.length - 1].insertCell();
-                newCell6.textContent = books[i].average_rating;
+                newCell6.textContent = books[i].averageRating;
                 const newCell7 = searchtable.rows[searchtable.rows.length - 1].insertCell();
-                newCell7.textContent = books[i].ratings_count;
+                newCell7.textContent = books[i].ratingsCount;
                 const newCell8 = searchtable.rows[searchtable.rows.length - 1].insertCell();
-                newCell8.textContent = books[i].text_reviews_count;
+                newCell8.textContent = books[i].textReviewsCount;
                 const newCell9 = searchtable.rows[searchtable.rows.length - 1].insertCell();
-                newCell9.textContent = books[i].publication_date;
+                newCell9.textContent = books[i].publicationDate;
                 const newCell10 = searchtable.rows[searchtable.rows.length - 1].insertCell();
                 newCell10.textContent = books[i].publisher;
                 const newCell11 = searchtable.rows[searchtable.rows.length - 1].insertCell();
-                newCell11.textContent = books[i].num_pages;
+                newCell11.textContent = books[i].numPages;
                 const newCell12 = searchtable.rows[searchtable.rows.length - 1].insertCell();
                 newCell12.textContent = books[i].bookID;
             }
