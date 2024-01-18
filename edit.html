@@ -51,7 +51,8 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <div class="navbar-nav me-auto mb-2">
                     <a class="nav-link" href="/index.html">Home</a>
-                    <a class="nav-link active" href="/fulldataset.html">Full Dataset</a>
+                    <a class="nav-link" href="/fulldataset.html">Full Dataset</a>
+                    <a class="nav-link active" href="/edit.html">Edit Dataset</a>
                 </div>
 
                 <!--Search Bar (Olawanle, 2023) (W3Schools, 2023c) (Bootstrap Team, 2023b) (Bootstrap Team, 2023c)-->
@@ -68,10 +69,10 @@
                                 <img src="/images/filter.png" height="30" alt="Filter">
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a id="title" class="dropdown-item" href="#" onclick="filter('title')">Title</a></li>
-                                <li><a id="authors" class="dropdown-item" href="#" onclick="filter('authors')">Authors</a></li>
+                                <li><a id="title" class="dropdown-item active" href="#" onclick="filter('title')">Title</a></li>
+                                <li><a id="authors" class="dropdown-item active" href="#" onclick="filter('authors')">Authors</a></li>
                                 <li><a id="averageRating" class="dropdown-item" href="#" onclick="filter('averageRating')">Average Rating</a></li>
-                                <li><a id="isbn" class="dropdown-item" href="#" onclick="filter('isbn')">ISBN</a></li>
+                                <li><a id="isbn" class="dropdown-item active" href="#" onclick="filter('isbn')">ISBN</a></li>
                                 <li><a id="isbn13" class="dropdown-item" href="#" onclick="filter('isbn13')">ISBN-13</a></li>
                                 <li><a id="languageCode" class="dropdown-item" href="#" onclick="filter('languageCode')">Language Code</a></li>
                                 <li><a id="numPages" class="dropdown-item" href="#" onclick="filter('numPages')">Page Count</a></li>
@@ -88,6 +89,7 @@
         </div>
     </nav>
 
+    <!--Form to add book-->
     <div class="container-fluid" id="addbook">
         <h1>Add Book</h1>
         <p>Use this form to add a book to the dataset <i>(please note this is saved locally only)</i></p>
@@ -111,6 +113,7 @@
 
     <br>
 
+    <!--Form to remove book-->
     <div class="container-fluid" id="removebook">
         <h1>Remove book</h1>
         <p>Use this form to remove a book from the dataset using either it's book ID or ISBN <i>(please note this is saved locally only)</i></p>
@@ -123,6 +126,7 @@
 
     <br>
 
+    <!--Button to revert dataset-->
     <div class="container fluid" id="revertdataset">
         <h1>Revert Dataset</h1>
         <p>Use this button to revert the dataset back to it's original state</p>

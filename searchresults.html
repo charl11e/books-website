@@ -26,6 +26,7 @@
     <script src="search.js"></script>
     <script src="dataset.js"></script>
     <script src="datasettable.js"></script>
+    <script src="edit.js"></script>
 
     <!--Set Viewport (helps scaling on mobile devices) (W3Schools, 2023b)-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -51,6 +52,7 @@
                 <div class="navbar-nav me-auto mb-2">
                     <a class="nav-link" href="/index.html">Home</a>
                     <a class="nav-link" href="/fulldataset.html">Full Dataset</a>
+                    <a class="nav-link" href="/edit.html">Edit Dataset</a>
                 </div>
 
                 <!--Search Bar (Olawanle, 2023) (W3Schools, 2023c) (Bootstrap Team, 2023b) (Bootstrap Team, 2023c)-->
@@ -67,10 +69,10 @@
                                 <img src="/images/filter.png" height="30" alt="Filter">
                             </button>
                             <ul class="dropdown-menu">
-                                <li><a id="title" class="dropdown-item" href="#" onclick="filter('title')">Title</a></li>
-                                <li><a id="authors" class="dropdown-item" href="#" onclick="filter('authors')">Authors</a></li>
+                                <li><a id="title" class="dropdown-item active" href="#" onclick="filter('title')">Title</a></li>
+                                <li><a id="authors" class="dropdown-item active" href="#" onclick="filter('authors')">Authors</a></li>
                                 <li><a id="averageRating" class="dropdown-item" href="#" onclick="filter('averageRating')">Average Rating</a></li>
-                                <li><a id="isbn" class="dropdown-item" href="#" onclick="filter('isbn')">ISBN</a></li>
+                                <li><a id="isbn" class="dropdown-item active" href="#" onclick="filter('isbn')">ISBN</a></li>
                                 <li><a id="isbn13" class="dropdown-item" href="#" onclick="filter('isbn13')">ISBN-13</a></li>
                                 <li><a id="languageCode" class="dropdown-item" href="#" onclick="filter('languageCode')">Language Code</a></li>
                                 <li><a id="numPages" class="dropdown-item" href="#" onclick="filter('numPages')">Page Count</a></li>
@@ -100,6 +102,8 @@
         <i>&nbsp;&nbsp;&nbsp;Please note: Detailed dataset may cause performance issues on older devices</i>
     </div>
 
+
+    <!--Table (table is appended to elements)-->
     <div class="container-fluid" id="table-container">
         <p id="tabledatasearchbasic"></p>
         <p id="tabledatasearchdetailed"></p>
