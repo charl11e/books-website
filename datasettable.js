@@ -44,7 +44,7 @@ function tbbasic () {
         newCellMain3.textContent = 'ISBN';
 
         // Insert the data into the table
-        for (let i = 0; i < books.length - 1; i++) {
+        for (let i = 0; i < books.length; i++) {
             table.insertRow();
             const newCell1 = table.rows[table.rows.length - 1].insertCell();
             newCell1.textContent = books[i].title;
@@ -122,7 +122,7 @@ function tbdetailed () {
     newCellMain12.textContent = 'Book ID';
 
     // Insert the data into the table
-    for (let i = 0; i < books.length - 1; i++) {
+    for (let i = 0; i < books.length; i++) {
         table.insertRow();
         const newCell1 = table.rows[table.rows.length - 1].insertCell();
         newCell1.textContent = books[i].title;
@@ -188,7 +188,7 @@ function tbsearchbasic () {
             newCellMain3.style = 'font-weight:bold; font-size:20px';
             newCellMain3.textContent = 'ISBN';
 
-            for (let i = 0; i < books.length - 1; i++) {
+            for (let i = 0; i < books.length; i++) {
                 if (searchhits.includes(books[i].isbn)) {
                     searchtable.insertRow();
                     const newCell1 = searchtable.rows[searchtable.rows.length - 1].insertCell();
@@ -272,7 +272,7 @@ function tbsearchdetailed () {
         newCellMain12.style = 'font-weight:bold; font-size:20px';
         newCellMain12.textContent = 'Book ID';
 
-        for (let i = 0; i < books.length - 1; i++) {
+        for (let i = 0; i < books.length; i++) {
             if (searchhits.includes(books[i].isbn)) {
                 searchtable.insertRow();
                 const newCell1 = searchtable.rows[searchtable.rows.length - 1].insertCell();

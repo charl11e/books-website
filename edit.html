@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang = "en-GB" data-bs-theme="dark">
+
+<head>
+    <!--Set characterset-->
+    <meta charset="utf-8">
+
+    <!--Title & Favicon (W3Schools, 2023a)-->
+    <title>Pocket Library</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+
+    <!--Bootstrap Integration (Bootstrap Team, 2023a)-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!--D3 Integration-->
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+
+    <!--Plot Integration (Observable HQ, 2023a)-->
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@observablehq/plot@0.6"></script>    
+
+    <!--Link CSS sheet & Javascript scripts-->
+    <link href="css.css" rel="stylesheet">
+    <script src="search.js"></script>
+    <script src="dataset.js"></script>
+    <script src="datasettable.js"></script>
+    <script src="edit.js"></script>
+
+    <!--Set Viewport (helps scaling on mobile devices) (W3Schools, 2023b)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <!--Navbar (W3Schools, 2023h)-->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            
+            <a class="navbar-brand" href="#">
+                <img src="/images/favicon.png" alt="Logo" height="30" class="d-inline-block align-text-top">
+                Pocket Library
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="navbar-nav me-auto mb-2">
+                    <a class="nav-link" href="/index.html">Home</a>
+                    <a class="nav-link active" href="/fulldataset.html">Full Dataset</a>
+                </div>
+
+                <!--Search Bar (Olawanle, 2023) (W3Schools, 2023c) (Bootstrap Team, 2023b) (Bootstrap Team, 2023c)-->
+                <div class="d-flex flex-row-reverse">
+                    <form class="d-flex" role="search" id="searchform" action="/searchresults.html" onsubmit="search()">
+                        <input class="form-control me-2" type="text" id="searchquery" placeholder="Enter your search:">
+                        <button class="btn btn-default" id="submit"><img src="/images/search.png" height="30" alt="Search"></button>
+                    </form>
+
+                    <!--Filter for search bar (W3Schools, 2023i)-->
+                    <div id="dropdown-position">
+                        <div class ="search-filter">
+                            <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
+                                <img src="/images/filter.png" height="30" alt="Filter">
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a id="title" class="dropdown-item" href="#" onclick="filter('title')">Title</a></li>
+                                <li><a id="authors" class="dropdown-item" href="#" onclick="filter('authors')">Authors</a></li>
+                                <li><a id="averageRating" class="dropdown-item" href="#" onclick="filter('averageRating')">Average Rating</a></li>
+                                <li><a id="isbn" class="dropdown-item" href="#" onclick="filter('isbn')">ISBN</a></li>
+                                <li><a id="isbn13" class="dropdown-item" href="#" onclick="filter('isbn13')">ISBN-13</a></li>
+                                <li><a id="languageCode" class="dropdown-item" href="#" onclick="filter('languageCode')">Language Code</a></li>
+                                <li><a id="numPages" class="dropdown-item" href="#" onclick="filter('numPages')">Page Count</a></li>
+                                <li><a id="ratingsCount" class="dropdown-item" href="#" onclick="filter('ratingsCount')">Ratings Count</a></li>
+                                <li><a id="textReviewsCount" class="dropdown-item" href="#" onclick="filter('textReviewsCount')">Reviews Count</a></li>
+                                <li><a id="publicationDate" class="dropdown-item" href="#" onclick="filter('publicationDate')">Publication Date</a></li>
+                                <li><a id="publisher" class="dropdown-item" href="#" onclick="filter('publisher')">Publisher</a></li>
+                                <li><a id="bookid" class="dropdown-item" href="#" onclick="filter('bookid')">Book ID</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid" id="addbook">
+        <h1>Add Book</h1>
+        <p>Use this form to add a book to the dataset <i>(please note this is saved locally only)</i></p>
+        <p style="text-decoration: underline;">* denotes a required form</p>
+        
+        <form>
+            <input type="text" id="addtitle" placeholder="Title *" required> <br>
+            <input type="text" id="addauthors" placeholder="Authors *" required> <br>
+            <input type="text" id="addaverageRating" placeholder="Average Rating"> <br>
+            <input type="text" id="addisbn" placeholder="ISBN"> <br>
+            <input type="text" id="addisbn13" placeholder="ISBN-13"> <br>
+            <input type="text" id="addlanguageCode" placeholder="Language Code"> <br>
+            <input type="text" id="addnumPages" placeholder="Page Count"> <br>
+            <input type="text" id="addratingsCount" placeholder="Ratings Count"> <br>
+            <input type="text" id="addtextReviewsCount" placeholder="Reviews Count"> <br>
+            <input type="text" id="addpublicationDate" placeholder="Publication Date"> <br>
+            <input type="text" id="addpublisher" placeholder="Publisher"> <br><br>
+            <button type="button" class="btn btn-primary" onclick="addbook()">Add Book</button>
+        </form>
+    </div>
+
+    <br>
+
+    <div class="container-fluid" id="removebook">
+        <h1>Remove book</h1>
+        <p>Use this form to remove a book from the dataset using either it's book ID or ISBN <i>(please note this is saved locally only)</i></p>
+
+        <form>
+            <input type="text" id="removebookid" placeholder="Book ID"> <br>
+            <input type="text" id="removeisbn" placeholder="ISBN"> <br><br>
+            <button type="button" class="btn btn-primary" onclick="removebook()">Remove Book</button>
+    </div>
+
+    <br>
+
+    <div class="container fluid" id="revertdataset">
+        <h1>Revert Dataset</h1>
+        <p>Use this button to revert the dataset back to it's original state</p>
+        <button type="button" class="btn btn-danger" onclick="revert()">Revert Dataset</button>
+    </div>
+
+</body>
+</html>

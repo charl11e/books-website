@@ -29,3 +29,27 @@ table, th, td {
     color:black;
     float:right;
 }
+
+#addbook {
+    margin-left:25%;
+    text-align:center;
+    width:50%;
+    border:3px solid white;
+    padding:10px;
+}
+
+#removebook {
+    margin-left:25%;
+    text-align:center;
+    width:50%;
+    border:3px solid white;
+    padding:10px;
+}
+
+#revertdataset {
+    margin-left:25%;
+    text-align:center;
+    width:50%;
+    border:3px solid white;
+    padding:10px;
+}

@@ -1,8 +1,8 @@
 // This JS file contains the code that loads the dataset and stores it in an array of objects.
 // When loading the dataset, I decided to pass the data through a class, while this likely makes loading the data slower, it makes it easier to access specific parts of the data later (especially when using the search function).
 
-// Declare that d3 is a global variable for ESLint (ESLint, 2023a)
-/* global d3 */
+// Declare that d3 and localstorage is a global variable for ESLint (ESLint, 2023a)
+/* global d3 localStorage */
 
 // Class that creates a book object for each book in the dataset
 class Book {
@@ -47,6 +47,26 @@ d3.csv('data.csv').then(data => {
     for (let i = 0; i < data.length; i++) {
         books.push(new Book(data[i].bookID, data[i].title, data[i].authors, data[i].average_rating, data[i].isbn, data[i].isbn13, data[i].language_code, data[i].num_pages, data[i].ratings_count, data[i].text_reviews_count, data[i].publication_date, data[i].publisher));
         };
+
+    // Load added books from local storage (MDN Web Docs, 2023d) (Stack Overflow, 2010)
+    const newbooks = JSON.parse(localStorage.getItem('addedbooks'));
+    if (newbooks !== null) {
+        for (let i = 0; i < newbooks.length; i++) {
+            books.push(new Book(newbooks[i].bookID, newbooks[i].title, newbooks[i].authors, newbooks[i].averageRating, newbooks[i].isbn, newbooks[i].isbn13, newbooks[i].languageCode, newbooks[i].numPages, newbooks[i].ratingsCount, newbooks[i].textReviewsCount, newbooks[i].publicationDate, newbooks[i].publisher));
+        }
+    }
+
+    // Check if any books have been removed, if so, remove them (MDN Web Docs, 2023d)
+    const removedbooks = JSON.parse(localStorage.getItem('removedbooks'));
+    if (removedbooks !== null) {
+        for (let i = 0; i < removedbooks.length; i++) {
+            for (let j = 0; j < books.length; j++) {
+                if (removedbooks[i] === books[j].bookID) {
+                    books.splice(j, 1);
+                }
+            }
+        }
+    }
 
     // Check if page is on full database, if so, load the table
     if (document.URL.includes('fulldataset.html')) {

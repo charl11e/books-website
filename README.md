@@ -7,6 +7,7 @@ Based on the dataset 'Goodreads-books' https://www.kaggle.com/datasets/jealousle
 - NEEDTO: ESLint
 - NEEDTO: .git file is attached to assignment, but I have also attached photos of my git history
 - NEEDTO: organise reference list
+- NEEDTO: add error handling for d3 CSV
 - All references for code/images not included in the lecture material are below
 
 # References:
@@ -53,6 +54,12 @@ Observable HQ (2023a) Getting Started. Available at: https://observablehq.com/pl
 Medium (2020) How to Position HTML Elements Side by Side with CSS. Available at: https://codeburst.io/how-to-position-html-elements-side-by-side-with-css-e1fae72ddcc (Accessed: 12th January 2024)
 
 ESLint (2023a) Configure Language Options. Available at: https://eslint.org/docs/latest/use/configure/language-options#specifying-globals (Accessed: 15th January 2024)
+
+MDN Web Docs (2023d) Window: localstorage property. Available at: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage (Accessed: 17th January 2024)
+
+Stackoverflow (2010) How do I store an array in local storage? Available at: https://stackoverflow.com/questions/3357553/how-do-i-store-an-array-in-localstorage (Accessed: 17th January 2024)
+
+W3Schools (Refsnes Data) (2023m) Window location.reload(). Available at: https://www.w3schools.com/jsref/met_loc_reload.asp (Accessed: 17th January 2024)
 
 # Image References (located in /images):
 favicon.png: Creazilla (2023) Stack of Books Clipart. Available at: https://creazilla.com/nodes/79607-stack-of-books-clipart (Accessed: 13th November 2023)
