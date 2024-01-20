@@ -1,7 +1,7 @@
 // This JS file contains the code that allows the user to edit the dataset.
 // I was not aware of any methods that allow me to directly edit a CSV file, so I decided to use local storage to store the added/removed books.
 // When the books array is loaded, books are also loaded from local storage, and added to the books array.
-// If any books have been removed, they are removed from the books array when the books array is loaded.
+// If any books have been removed, they are removed from the books array after the books array is loaded.
 // This means that the user can add/remove books, and then revert the dataset to its original state.
 // By using local storage, the user can also close the page and come back to it later, and the added/removed books will still be there. (As long as local storage is allowed by the browser)
 

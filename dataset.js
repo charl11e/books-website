@@ -2,8 +2,8 @@
 // When loading the dataset, I decided to pass the data through a class, while this likely makes loading the data slower, it makes it easier to access specific parts of the data later (especially when using the search function).
 // I added this because I want the user to be able to view the actual dataset in a nice table
 
-// Declare that d3 and localstorage is a global variable for ESLint (ESLint, 2023a)
-/* global d3 localStorage */
+// Declare that d3, localstorage are global variables for ESLint (ESLint, 2023a)
+/* global d3 localStorage  */
 
 // Class that creates a book object for each book in the dataset
 class Book {

@@ -3,19 +3,21 @@ Based on the dataset 'Goodreads-books' https://www.kaggle.com/datasets/jealousle
 
 # Notes:
 - All code is commented throughout to justify/explain features and choices, including additional features beyond the specification
-- NEEDTO: JSDoc files located in 'out' folder
-- NEEDTO: ESLint
-- NEEDTO: .git file is attached to assignment, but I have also attached photos of my git history
-- NEEDTO: organise reference list
-- NEEDTO: add error handling for d3 CSV
-- All references for code/images not included in the lecture material are below
+- All JSDoc files are located in out file
+- ESLint has been run using provided rules and any issues have been rectified
+- .git file is attached to assignment, but I have also attached photos of my git history
+- All references for code/images not included in the lecture material are listed below
 
-# References:
+# Code References:
 Bootstrap Team (2023a) Bootstrap Download. Available at: https://getbootstrap.com/docs/5.3/getting-started/download/ (Accessed: 7th November 2023)
 
 Bootstrap Team (2023b) Flex. Available at: https://getbootstrap.com/docs/5.3/utilities/flex/ (Accessed: 15th November 2023)
 
 Bootstrap Team (2023c) Navbar. Available at: https://getbootstrap.com/docs/5.3/components/navbar/ (Accessed: 15th November 2023)
+
+Bootstrap Team (2023d) Buttons. Available at: https://getbootstrap.com/docs/4.0/components/buttons/ (Accessed: 20th January 2024)
+
+Bootstrap Team (2023e) Color modes. Available at: https://getbootstrap.com/docs/5.3/customize/color-modes/ (Accessed: 20th January 2024)
 
 ESLint (2023a) Configure Language Options. Available at: https://eslint.org/docs/latest/use/configure/language-options#specifying-globals (Accessed: 15th January 2024)
 
@@ -61,8 +63,17 @@ W3Schools (Refsnes Data) (2023l) Javascript Async. Available at: https://www.w3s
 
 W3Schools (Refsnes Data) (2023m) Window location.reload(). Available at: https://www.w3schools.com/jsref/met_loc_reload.asp (Accessed: 17th January 2024)
 
+W3Schools (Refsnes Data) (2023n) HTML Forms. Available at: https://www.w3schools.com/html/html_forms.asp (Accessed: 20th January 2024)
+
+# ESLint/JSDoc References
+All assistance for generating JSDocs either came from lecture material or devdocs.io (2024) Getting Started with JSDOC 3. Available at: https://devdocs.io/jsdoc/about-getting-started (Accessed: 18th January 2024)
+
+Setting up ESLint and using it came from lecture material, disabling rules for occasional lines came from: ESLint (2024) Configure Rules. Available at: https://eslint.org/docs/latest/use/configure/rules (Accessed: 18th January 2024)
+
 # Image References (located in /images):
 favicon.png: Creazilla (2023) Stack of Books Clipart. Available at: https://creazilla.com/nodes/79607-stack-of-books-clipart (Accessed: 13th November 2023)
+filter.png: Iconfinder (2023) Filter Icon. Available at: https://www.iconfinder.com/icons/1608702/filter_icon (Accessed: 13th November 2023)
+search.png: icons-icons (2023) (Adapted from) Search Icon. Available at: https://icon-icons.com/icon/search/153438 (Accessed: 13th November 2023)
 
 # File/Graph References (located in /graphdata):
 Data (and the subsequent graphs generated from this data) in this file were generated from the original dataset with the help of Observable (2024a) Programming Summative Workspace. Available at: https://observablehq.com/d/553208699f3eb252 (Accessed: 11th January 2024) 

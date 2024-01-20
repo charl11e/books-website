@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = "en-GB" data-bs-theme="dark">
+<html lang = "en-GB" data-bs-theme="dark"> <!--(Bootstrap Team, 2023e)-->
 
 <head>
     <!--Set characterset-->
@@ -39,7 +39,7 @@
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/index.html">
                 <img src="/images/favicon.png" alt="Logo" height="30" class="d-inline-block align-text-top">
                 Pocket Library
             </a>
@@ -55,14 +55,14 @@
                     <a class="nav-link active" href="/edit.html">Edit Dataset</a>
                 </div>
 
-                <!--Search Bar (Olawanle, 2023) (W3Schools, 2023c) (Bootstrap Team, 2023b) (Bootstrap Team, 2023c)-->
+                <!--Search Bar (Olawanle, 2023) (W3Schools, 2023c) (Bootstrap Team, 2023b) (Bootstrap Team, 2023c) (Bootstrap Team 2023d)-->
                 <div class="d-flex flex-row-reverse">
                     <form class="d-flex" role="search" id="searchform" action="/searchresults.html" onsubmit="search()">
                         <input class="form-control me-2" type="text" id="searchquery" placeholder="Enter your search:">
                         <button class="btn btn-default" id="submit"><img src="/images/search.png" height="30" alt="Search"></button>
                     </form>
 
-                    <!--Filter for search bar (W3Schools, 2023i)-->
+                    <!--Filter for search bar (W3Schools, 2023i) (Bootstrap Team 2023d)-->
                     <div id="dropdown-position">
                         <div class ="search-filter">
                             <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown">
@@ -89,7 +89,7 @@
         </div>
     </nav>
 
-    <!--Form to add book-->
+    <!--Form to add book (W3Schools 2023n)-->
     <div class="container-fluid" id="addbook">
         <h1>Add Book</h1>
         <p>Use this form to add a book to the dataset <i>(please note this is saved locally only)</i></p>
@@ -113,7 +113,7 @@
 
     <br>
 
-    <!--Form to remove book-->
+    <!--Form to remove book (W3Schools 2023n)-->
     <div class="container-fluid" id="removebook">
         <h1>Remove book</h1>
         <p>Use this form to remove a book from the dataset using either it's book ID or ISBN <i>(please note this is saved locally only)</i></p>
@@ -126,7 +126,7 @@
 
     <br>
 
-    <!--Button to revert dataset-->
+    <!--Button to revert dataset (Bootstrap Team 2023d)-->
     <div class="container fluid" id="revertdataset">
         <h1>Revert Dataset</h1>
         <p>Use this button to revert the dataset back to it's original state</p>

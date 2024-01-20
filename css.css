@@ -30,6 +30,7 @@ table, th, td {
     float:right;
 }
 
+/* For editing dataset */
 #addbook {
     margin-left:25%;
     text-align:center;
