@@ -1,5 +1,5 @@
 # Programming Gold Summative Website
-Based on the dataset 'Goodreads-books' https://www.kaggle.com/datasets/jealousleopard/goodreadsbooks
+Based on the dataset 'Goodreads-books' https://www.kaggle.com/datasets/jealousleopard/goodreadsbooks (this is saved as data.csv in the file structure)
 
 # Notes:
 - All code is commented throughout to justify/explain features and choices, including additional features beyond the specification
@@ -7,6 +7,13 @@ Based on the dataset 'Goodreads-books' https://www.kaggle.com/datasets/jealousle
 - ESLint has been run using provided rules and any issues have been rectified
 - .git file is attached to assignment, but I have also attached photos of my git history
 - All references for code/images not included in the lecture material are listed below
+
+# Execution Instructions:
+- Open index.html with a live server
+- Ensure that your browser allows sessionstorage/localstorage (needed to allow search feature to work/for editing the dataset)
+
+# Background:
+When making this project, I wanted to use the dataset to make it more like a database, where a user can easily browse/search for certain books based on the criteria provided in the dataset. This means that everthing has been designed to be user-focused, and easy to use.
 
 # Code References:
 Bootstrap Team (2023a) Bootstrap Download. Available at: https://getbootstrap.com/docs/5.3/getting-started/download/ (Accessed: 7th November 2023)
@@ -65,7 +72,7 @@ W3Schools (Refsnes Data) (2023m) Window location.reload(). Available at: https:/
 
 W3Schools (Refsnes Data) (2023n) HTML Forms. Available at: https://www.w3schools.com/html/html_forms.asp (Accessed: 20th January 2024)
 
-# ESLint/JSDoc References
+# ESLint/JSDoc References:
 All assistance for generating JSDocs either came from lecture material or devdocs.io (2024) Getting Started with JSDOC 3. Available at: https://devdocs.io/jsdoc/about-getting-started (Accessed: 18th January 2024)
 
 Setting up ESLint and using it came from lecture material, disabling rules for occasional lines came from: ESLint (2024) Configure Rules. Available at: https://eslint.org/docs/latest/use/configure/rules (Accessed: 18th January 2024)
