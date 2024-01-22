@@ -4,8 +4,8 @@ Based on the dataset 'Goodreads-books' https://www.kaggle.com/datasets/jealousle
 # Notes:
 - All code is commented throughout to justify/explain features and choices, including additional features beyond the specification
 - All JSDoc files are located in out file
-- ESLint has been run using provided rules and any issues have been rectified
-- .git file is attached to assignment, but I have also attached photos of my git history (Find under Git Files)
+- ESLint has been run using provided rules and any issues have been rectified - output when running ESLint is saved under eslint_output.txt
+- Git log file is attached to assignment, but I have also attached photos of my git history (Find under Git Files)
 - All references for code/images not included in the lecture material are listed below
 
 # Execution Instructions:

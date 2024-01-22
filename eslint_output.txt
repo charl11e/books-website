@@ -1,0 +1,10 @@
+/Users/charlieshorrock/.zprofile:2: no such file or directory: /usr/local/bin/brew
+(base) charlieshorrock@charliesmacbook Programming summative % npx eslint
+(base) charlieshorrock@charliesmacbook Programming summative % npx eslint dataset.js
+(base) charlieshorrock@charliesmacbook Programming summative % npx eslint datasettable.js
+(base) charlieshorrock@charliesmacbook Programming summative % npx eslint edit.js
+(base) charlieshorrock@charliesmacbook Programming summative % npx eslint search.js
+(base) charlieshorrock@charliesmacbook Programming summative % npx eslint visualisations.js 
+(base) charlieshorrock@charliesmacbook Programming summative % 
+
+(No output as all errors have been fixed)
